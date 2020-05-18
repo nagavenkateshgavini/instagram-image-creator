@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="split left">
+        <div class="centered">
+            <h3>Enter the first page contents</h3>
+            <div class="formdiv">
+                <form action="{{ url_for('preview_imgs') }}" method="POST">
+                    <label for="title">Title</label>
+                    <input type="text" id="maintitle" name="maintitle" placeholder="Title..">
+
+                    <label for="subtitle">Sub title</label>
+                    <input type="text" id="mainsubtitle" name="mainsubtitle" placeholder="Sub title name..">
+
+                    <label for="template">Template</label>
+                    <select id="template" name="country">
+                        <option value="firsttemp">First one</option>
+                        <option value="secondtemp">Second one</option>
+                    </select>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="split right">
+        <div class="centered">
+            <h1> Wait! </h1>
+            <p> Preview dispaly here <p>
+        </div>
+
+    </div>
+{% endblock %}

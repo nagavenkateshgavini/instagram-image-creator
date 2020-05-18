@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/style.css') }}">
+
+    <title>Code Heist</title>
+  </head>
+  <body>
+    <div id='cssmenu'>
+        <ul>
+            <li class='active'><a href="{{ url_for('hello')}}">Home</a></li>
+            <li> <a href="{{ url_for('createmain') }}">CreateMain</a> </li>
+            <li> <a href="{{ url_for('createcontent') }}">CreateContent</a> </li>
+            <li> <a href="{{ url_for('about') }}">About</a> </li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+  </body>
+</html>
